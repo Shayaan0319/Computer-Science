@@ -1,0 +1,19 @@
+# carpet cost program
+
+# -------------------------
+# Subprograms
+# -------------------------
+def carpet_cost(width, length, price):
+  carpet = width * length* price
+  grippers = width + length
+  fitting = 50
+  return carpet + grippers + fitting
+    
+# -------------------------
+# Main program
+# -------------------------
+width = int(input("enter the width of the room to the nearest metre: "))
+length = int(input("enter the length of the room to the nearest metre: "))
+price = float(input("enter the proce of the room per m2"))
+print("The total cost is: £", carpet_cost(width, length, price))
+
