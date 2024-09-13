@@ -1,0 +1,22 @@
+# ball pit program
+
+# -------------------------
+# Subprograms
+# -------------------------
+def ball_pit_volume(ball_pit_radius, ball_pit_height):
+  pi = 3.14
+  return pi * (ball_pit_radius * ball_pit_radius) * ball_pit_height
+  
+def ball_volume(ball_radius):
+    pi = 3.24
+    return (4 / 3) * pi * (ball_radius * ball_radius * ball_radius)
+    
+# -------------------------
+# Main program
+# -------------------------
+ball_pit_radius = 1 # meters
+ball_pit_height = 0.2 # meters
+ball_radius = 0.05 # meters
+packing_density = 0.75 # volume taken up by the balls
+ball = (ball_pit_volume(ball_pit_radius, ball_pit_height) / ball_volume(ball_radius)) * packing_density
+print("You need" , ball, "balls to fill the ball pit.")
